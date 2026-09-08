@@ -1,4 +1,4 @@
-ATIVIDADE 1 - OK
-ATIVIDADE 2 (FALTA OS VALORES DAS NOTAS; ADMITI QUE CADA VALOR POSSUÍSSE APENAS 1 NOTA) - OK
-ATIVIDADE 3 - OK
-ATIIVIDADE 4 -  OK
+Atividade 1 - Confere
+Atividade 2 - Confere
+Atividade 3 - Confere
+Atividade 4 - Confere
