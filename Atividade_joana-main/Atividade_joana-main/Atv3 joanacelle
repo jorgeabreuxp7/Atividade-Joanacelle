@@ -1,8 +1,11 @@
 #include <stdio.h>
+
 int main() {
     int a;
     int b;
     int c;
+
+    // Recebe os três números digitados pelo usuário
     printf("Digite o 1º número: ");
     scanf("%d", &a);
     printf("Digite o 2º número: ");
@@ -10,13 +13,11 @@ int main() {
     printf("Digite o 3º número: ");
     scanf("%d", &c);
 
-    // NÚMEROS NÃO REPETIDOS
-
+    // Entra aqui apenas se todos os números forem diferentes entre si
     if (a != b && a != c && b != c) {
         printf("Não existem números repetidos\n");
         
-        // MAIOR NÚMERO
-
+        // Compara os valores para descobrir qual deles é o maior
         if (a > b && a > c) {
             printf("O número %d é o maior número\n", a);
         }
@@ -27,8 +28,7 @@ int main() {
             printf("O número %d é o maior número\n", c);
         }
 
-        // MENOR NÚMERO
-
+        // Compara os valores para descobrir qual deles é o menor
         if (a < b && a < c) {
             printf("O menor número é %d\n", a);
         }
@@ -39,8 +39,7 @@ int main() {
             printf("O menor número é %d\n", c);
         }
 
-        // NÚMERO INTERMEDIÁRIO
-
+        // Verifica qual número ficou no meio dos outros dois
         if ((a > b && a < c) || (a > c && a < b)) {
             printf("O número intermediário é %d\n", a);
         }
@@ -51,8 +50,7 @@ int main() {
             printf("O número intermediário é %d\n", c);
         }
 
-        // ORDEM
-
+        // Checa as combinações de ordem em que os números foram inseridos
         if (a < b && b < c) {
             printf("Ordem crescente\n");
         }
@@ -60,44 +58,43 @@ int main() {
             printf("Ordem decrescente\n");
         }
         else if (a < c && c < b) {
-            printf("Ordem crescente\n");
+            printf("Fora de ordem\n");
         }
         else if (a > c && c > b) {
-            printf("Ordem decrescente\n");
+            printf("Fora de ordem\n");
         }
         else if (b < a && a < c) {
-            printf("Ordem crescente\n");
+            printf("Fora de ordem\n");
         }
         else if (b > a && a > c) {
-            printf("Ordem decrescente\n");
+            printf("Fora de ordem\n");
         }
         else if (b < c && c < a) {
-            printf("Ordem crescente\n");
+            printf("Fora de ordem\n");
         }
         else if (b > c && c > a) {
-            printf("Ordem decrescente\n");
+            printf("Fora de ordem\n");
         }
         else if (c < a && a < b) {
-            printf("Ordem crescente\n");
+            printf("Fora de ordem\n");
         }
         else if (c > a && a > b) {
-            printf("Ordem decrescente\n");
+            printf("Fora de ordem\n");
         }
         else {
             printf("Sem ordem\n");
         }
     }
 
-    // TODOS OS NÚMEROS IGUAIS
-
+    // Caso onde os três valores inseridos são idênticos
     else if (a == b && a == c) {
         printf("Todos os números são iguais\n");
     }
     
-    // DOIS NÚMEROS IGUAIS
-
+    // Caso padrão para quando existirem apenas dois números iguais
     else {
         printf("Existem números repetidos\n");
     }
+
     return 0;
 }
