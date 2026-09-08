@@ -4,16 +4,16 @@ int main () {
     int restante;
     int soma = 0;
     int quantidade = 0;
+
+    // Solicita o valor total que o usuário deseja sacar e armazena na variável
     printf ("Digite qual valor você deseja sacar: \n");
     scanf ("%d", &saque);
     restante = saque;
 
- // SE HOUVER APENAS 1 NOTA DE CADA VALOR
-
+    // Limita o cálculo para saques até o valor máximo que 1 nota de cada cédula permite (200+100+50+20+10+5 = 385)
     if (saque <= 385) {
 
-        // DISTRIBUI A NOTA DE 200
-
+        // Abate a cédula de maior valor (200) se o valor restante for suficiente
         if (restante >= 200) {
             printf ("1 nota de 200");
             restante = restante - 200;
@@ -21,8 +21,7 @@ int main () {
             quantidade++;
         }
 
-        // DISTRIBUI A NOTA DE 100
-
+        // Abate a cédula de 100 se ainda houver valor restante igual ou maior a ela
         if (restante >= 100) {
             printf ("1 nota de 100\n");
             restante = restante - 100;
@@ -30,8 +29,7 @@ int main () {
             quantidade++;
         }
 
-        // DISTRIBUI A NOTA DE 50
-
+        // Abate a cédula de 50 caso o valor restante permita
         if (restante >= 50) {
             printf ("1 nota de 50\n ");
             restante = restante - 50;
@@ -39,8 +37,7 @@ int main () {
             quantidade++;
         }
 
-        // DISTRIBUI A NOTA DE 20
-
+        // Abate a cédula de 20 caso o valor restante permita
         if (restante >= 20) {
             printf ("1 nota de 20\n");
             restante = restante - 20;
@@ -48,8 +45,7 @@ int main () {
             quantidade++;
         }
 
-        // DISTRIBUI A NOTA DE 10
-
+        // Abate a cédula de 10 caso o valor restante permita
         if (restante >= 10) {
             printf ("1 nota de 10\n");
             restante = restante - 10;
@@ -57,8 +53,7 @@ int main () {
             quantidade++;
         }
 
-        // DISTRIBUI A NOTA DE 5
-
+        // Abate a cédula de 5 caso o valor restante permita
         if (restante >= 5) {
             printf ("1 nota de 5\n");
             restante = restante - 5;
@@ -66,13 +61,13 @@ int main () {
             quantidade++;
         }
 
-        // SE NÃO TIVER MAIS VALOR PRA SER DADO, REALIZAR O SAQUE
-
+        // Confirma se o valor foi inteiramente coberto pelas cédulas sem gerar troco
         if (restante == 0){
             printf ("É possível realizar o saque\n");
             printf ("O valor do saque realizado foi de: %d\n", soma);
             printf ("O número de cédulas utilizadads foi de:%d\n", quantidade);
         }
+        // Indica que o valor digitado não pode ser pago exatamente com as cédulas disponíveis
         else {
             printf ("Não é possível realizar o saque");
         }
