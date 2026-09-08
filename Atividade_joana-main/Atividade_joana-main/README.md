@@ -1,4 +1,4 @@
-Atividade 1 - Confere |
-Atividade 2 - Confere |
-Atividade 3 - Confere |
-Atividade 4 - Confere 
+Atividade 1 |
+Atividade 2 |
+Atividade 3 |
+Atividade 4  
