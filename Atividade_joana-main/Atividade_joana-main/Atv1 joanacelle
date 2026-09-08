@@ -7,6 +7,8 @@ int main () {
     int a;
     int b;
     int c;
+
+    // Coleta as medidas dos três lados informados pelo usuário
     printf ("Digite o 1 lado do triangulo\n");
     scanf ("%d", &a);
     printf ("Digite o 2 lado do triangulo\n");
@@ -14,13 +16,11 @@ int main () {
     printf ("Digite o 3 lado do triangulo\n");
     scanf ("%d", &c);
 
-// SE PODE FORMAR O TRIANGULO
-
+    // Valida a condição de existência: a soma de dois lados deve ser sempre maior que o terceiro
     if (a + b > c && a + c > b && b + c > a) {
         printf ("É possível formar um triangulo:\n");
 
-// MAIOR LADO DO TRIANGULO
-
+        // Descobre qual é o maior lado e guarda os outros dois nas variáveis auxiliares
         if (a >= b && a >= c) {
             maior = a;
             lado1 = b;
@@ -37,8 +37,7 @@ int main () {
             lado2 = b;
         }
 
-// CLASSIFICAR QUAL TIPO DE TRIANGULO É
-
+        // Analisa a igualdade dos lados (3 iguais, 2 iguais ou todos diferentes)
         if (a == b && a == c) {
             printf ("O triângulo é equilátero\n");
         }
@@ -49,8 +48,7 @@ int main () {
             printf ("O triangulo é escaleno\n");
         }
 
-// DETERMINAÇÃO DO ÂNGULO DO TRIÂNGULO
-
+        // Classifica os ângulos aplicando a relação entre o quadrado do maior lado e a soma dos quadrados dos outros dois
         if ((maior * maior) > (lado1 * lado1) + (lado2 * lado2)) {
             printf ("O triângulo é obtusangulo\n");
         }
@@ -61,6 +59,7 @@ int main () {
             printf ("O triangulo é acutangulo\n");
         }
     }
+    // Mensagem de erro caso os valores informados não satisfaçam a condição de existência
     else {
         printf ("Não é possível formar um triângulo\n");
     }
