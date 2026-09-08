@@ -1,0 +1,68 @@
+#include <stdio.h>
+int main () {
+    int numero;
+    int menu;
+    printf ("===== MENU =====\n 1 - Verificar número par ou ímpar\n 2 - Verificar se é positivo ou negativo\n 3 - Calcular o quadrado do número\n 4 – Sair\n");
+    printf ("Escolha uma opção:\n");
+    scanf ("%d", &menu);
+    switch (menu) {
+
+        // CASO 1 - PAR OU ÍMPAR
+
+        case 1:
+            printf ("Digite um número:\n");
+            scanf ("%d", &numero);
+            if (numero % 2 == 0) {
+                printf ("O número %d é par\n", numero);
+            }
+            else {
+                printf ("O número é impar\n");
+            }
+
+            break;
+
+        // CASO 2 - POSITIVO OU NEGATIVO
+
+        case 2: 
+            printf ("Digite um número: \n");
+            scanf ("%d", &numero);
+            if (numero > 0) {
+                printf ("O número é positivo\n");
+            }
+
+            else if (numero == 0) {
+                printf ("O número é zero\n");
+            }
+
+            else {
+                printf ("O número é negativo\n");
+            }
+
+            break;
+
+        // CASO 3 - NÚMERO AO QUADRADO
+
+        case 3:
+            printf ("Digite um número: \n");
+            scanf ("%d", &numero);
+            printf ("O quadrado do número é %d", (numero * numero));
+
+            break;
+
+        // CASO 4 - SAIR
+
+        case 4:
+            printf ("Você saiu do programa\n");
+            
+            break;
+
+        // DEFAULT
+
+        default:
+            printf ("Opção inválida");
+            break;
+    }
+
+    return 0;
+
+}
